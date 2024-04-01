@@ -16,6 +16,8 @@ class Contact(models.Model):
     )
     address = models.TextField(blank=True, verbose_name="Address")
     description = models.TextField(blank=True, verbose_name="Description")
+    date_created = models.DateTimeField(auto_now_add=True, verbose_name="Date Created")
+    update_date = models.DateTimeField(auto_now=True, verbose_name="Date Updated")
 
     class Meta:
         verbose_name = "Contact"
