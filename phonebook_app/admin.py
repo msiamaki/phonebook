@@ -8,6 +8,7 @@ from .models import Contact
 
 @register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ("id", "first_name", "last_name", "phone_number")
+    list_display = ("id", "first_name", "last_name", "phone_number", "date_created", "update_date")
     list_display_links = ("first_name",)
+    list_editable = ("phone_number",)
     search_fields = ("first_name", "last_name", "phone_number", "address")
